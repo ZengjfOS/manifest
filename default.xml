@@ -1,10 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <manifest>
-    <remote name="AplexOS"
-        fetch="git@github.com" />
+
+    <!-- https mothed for repository.
+    <remote name="aosp"
+        fetch="https://github.com/ZoroZeng/" />
     <default revision="master"
-        remote="AplexOS"
+        remote="aosp"
         sync-j="4" />
-    <project path="zengjf/U-Boot" name="AplexOS/U-Boot.git" />
+    <project path="manifest" name="manifest.git" />
+    -->
+
+    <!-- ssh mothed for repository. -->
+    <remote name="aosp"
+        fetch="ssh://git@github.com/ZoroZeng/" />
+    <remote name="AplexOS"
+        fetch="ssh://git@github.com/AplexOS/" />
+
+    <!-- if you want to fetch just a branch from repository, set sync-c="true". -->
+    <default revision="master"
+        remote="aosp"
+        sync-c="true"   
+        sync-j="4" />
+
+    <project path="manifest" name="manifest" />
+
+    <project remote="AplexOS" path="Linux-Examples" name="Linux-Examples" />
+
+    <project remote="AplexOS" revision="master" sync-c="true" path="Android-Examples" name="Android-Examples" sync-j="4"/>
+    <project remote="AplexOS" revision="master" sync-c="true" path="U-Boot" name="U-Boot" sync-j="4"/>-->
+
+    <project remote="AplexOS" revision="ARM-Settings_JavaScript_SDK" sync-c="true" path="zh-cmn-Hans" name="zh-cmn-Hans" sync-j="4"/>
+
 </manifest>
