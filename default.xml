@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<manifest>
+    <remote name="AplexOS"
+        fetch="git@github.com" />
+    <default revision="master"
+        remote="AplexOS"
+        sync-j="4" />
+    <project path="zengjf/U-Boot" name="AplexOS/U-Boot"
+</manifest>
