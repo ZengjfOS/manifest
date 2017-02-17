@@ -33,7 +33,7 @@
 
 * 同步仓库：
 ```
-    $ ../git-repo/repo sync
+    $ ../git-repo/repo sync --no-tags
 ```
 
 * 创建分支：
