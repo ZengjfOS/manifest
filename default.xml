@@ -27,9 +27,10 @@
 
     <project remote="AplexOS" path="Linux-Examples" name="Linux-Examples" />
 
-    <project remote="AplexOS" revision="master" sync-c="true" path="Android-Examples" name="Android-Examples" sync-j="4"/>
-    <project remote="AplexOS" revision="master" sync-c="true" path="U-Boot" name="U-Boot" sync-j="4"/>-->
+    <!-- local path name = server path name -->
+    <project remote="AplexOS" revision="master" sync-c="true" name="Android-Examples" sync-j="4"/>
+
+    <project remote="AplexOS" revision="master" sync-c="true" path="U-Boot" name="U-Boot" sync-j="4" upstream="master" />
 
     <project remote="AplexOS" revision="ARM-Settings_JavaScript_SDK" sync-c="true" path="zh-cmn-Hans" name="zh-cmn-Hans" sync-j="4"/>
-
 </manifest>
