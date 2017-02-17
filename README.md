@@ -1,6 +1,7 @@
 # repo 学习
 
-主要是因为现在仓库越来越多，需要repo管理工具来做系统性的管理，其实主要还是在于编写[default.xml](default.xml)文件，这里的[default.xml](default.xml)也就是manifest.xml。
+* 主要是因为现在仓库越来越多，需要repo管理工具来做系统性的管理，其实主要还是在于编写[default.xml](default.xml)文件，这里的[default.xml](default.xml)也就是manifest.xml。
+* ref: [manifest-format.txt](https://gerrit.googlesource.com/git-repo/+/master/docs/manifest-format.txt)
 
 ## 最终文件目录架构：
     .
