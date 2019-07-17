@@ -26,29 +26,8 @@ Each branch will have detailed READMEs describing exact syntax.
 
 Examples
 --------
-To download the 4.14.98-2.0.1 Patch release
-repo init -u https://source.codeaurora.org/external/imx/imx-manifest  -b imx-linux-sumo -m imx-4.14.98-2.0.1_patch.xml
 
-To download the Virtualization 4.14.98-4.11-0.10 GA release
-repo init -u https://source.codeaurora.org/external/imx/imx-manifest  -b imx-linux-sumo -m imx-virt-4.14.98-4.11-0.10_ga.xml
-
-To download the 4.14.98-2.0.0 GA release
-repo init -u https://source.codeaurora.org/external/imx/imx-manifest  -b imx-linux-sumo -m imx-4.14.98-2.0.0_ga.xml
-
-To download the Machine Learning 4.14.78-1.0.0 release
-repo init -u https://source.codeaurora.org/external/imx/imx-manifest  -b imx-linux-sumo -m imx-4.14.78-1.0.0_machinelearning.xml
-
-To download the Virtualization 4.14.78-4.11-0.9.1 Beta release
-repo init -u https://source.codeaurora.org/external/imx/imx-manifest  -b imx-linux-sumo -m imx-virt-4.14.78-4.11-0.9.1_beta.xml
-
-To download the 4.14.78-1.0.4 Patch release
-repo init -u https://source.codeaurora.org/external/imx/imx-manifest  -b imx-linux-sumo -m imx-4.14.78-1.0.4_patch.xml
-
-To download the 4.14.78-1.0.0 GA release
-repo init -u https://source.codeaurora.org/external/imx/imx-manifest  -b imx-linux-sumo -m imx-4.14.78-1.0.0_ga.xml
-
-To download the 4.14.62-1.0.0 Beta release
-repo init -u https://source.codeaurora.org/external/imx/imx-manifest  -b imx-linux-sumo -m imx-4.14.62-1.0.0_beta.xml
+repo init -u https://github.com/ZengjfOS/manifest --repo-url=https://mirrors.ustc.edu.cn/aosp/git-repo -b imx-4.14.98-2.0.0_ga -m imx-4.14.98-2.0.0_ga.xml
 
 Setup the build folder for a BSP release:
 -----------------------------------------
@@ -70,7 +49,8 @@ components using our meta-fsl-bsp-release layer.
 
 Examples:
 - Setup for XWayland.
-$: MACHINE=imx7ulpevk DISTRO=fsl-imx-xwayland source ./fsl-setup-release.sh -b bld-xwayland
+  * `DISTRO=fsl-imx-wayland MACHINE=imx8qmmek source ./fsl-setup-release.sh -b imx8-build-wayland`
+  * `source setup-environment imx8-build-wayland`
 
 Build an image:
 ---------------

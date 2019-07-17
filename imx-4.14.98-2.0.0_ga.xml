@@ -8,7 +8,9 @@
   <remote fetch="git://github.com/openembedded" name="oe"/>
   <remote fetch="git://github.com/OSSystems" name="OSSystems"/>
   <remote fetch="git://github.com/meta-qt5"  name="QT5"/>
+  <remote fetch="git://github.com/ros"  name="ros"/>
   <remote fetch="https://source.codeaurora.org/external/imx" name="CAF"/>
+  <remote fetch="https://github.com/ZengjfOS" name="Adan"/>
 
 
   <project remote="yocto" revision="c9bd4984f8f471ca2c43052714f4413ba99cf171" name="poky" path="sources/poky"/>
@@ -28,9 +30,15 @@
   <project remote="QT5" revision="d4e7f73d04e8448d326b6f89908701e304e37d65" name="meta-qt5" path="sources/meta-qt5" />
 
   <project remote="CAF" revision="8eeb420fad668b733ab95b460895e1c337c66b25" name="meta-fsl-bsp-release" path="sources/meta-fsl-bsp-release" >
-     <linkfile src="imx/tools/fsl-setup-release.sh" dest="fsl-setup-release.sh"/>
-     <linkfile src="imx/README" dest="README-IMXBSP"/>
+    <linkfile src="imx/tools/fsl-setup-release.sh" dest="fsl-setup-release.sh"/>
+    <linkfile src="imx/README" dest="README-IMXBSP"/>
   </project>
 
+  <project remote="Adan" revision="Adan_Setup_Env" name="Yocto" path="sources/meta-Adan-bsp-release" >
+    <copyfile src="setup-environment" dest="sources/base/setup-environment" />
+    <copyfile src="fsl-setup-release.sh" dest="sources/meta-fsl-bsp-release/imx/tools/fsl-setup-release.sh" />
+  </project>
+
+  <project remote="ros" revision="7d24d8c960a7ae9eb65789395965e8f1b83b366e" name="meta-ros" path="sources/meta-ros" />
 
 </manifest>
