@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<manifest>
+
+    <!-- https mothed for repository.
+    <remote name="aosp"
+        fetch="git@github.com:ZengjfOS/" />
+    <default revision="master"
+        remote="aosp"
+        sync-j="4" />
+    <project path="manifest" name="manifest.git" />
+    -->
+
+    <!-- ssh mothed for repository. -->
+    <remote name="aosp"
+	fetch="https://github.com/ZengjfOS/" />
+
+    <!-- if you want to fetch just a branch from repository, set sync-c="true". -->
+    <default revision="master"
+        remote="aosp"
+        sync-c="true"   
+        sync-j="4" />
+
+    <project path="anpp" name="anpp" />
+    <project path="PluginsPy" name="PluginsPy" />
+    <project path="MDPlant" name="MDPlant" />
+
+</manifest>
